@@ -27,7 +27,7 @@ def build_data(x_files, y_files):
   return raw_X, raw_Y
 
 class My_Custom_Generator(keras.utils.Sequence):
-
+"""Keras class that uses that chunks the names and labels for batch processing"""
     def __init__(self, file_trial_list, file_Y_list, num_in_each, batch_size):
         cnt = 0
         extract_inds = []
