@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 import os
 
-def build_model():
+def load_model():
     # Create base model
 
     # First, instantiate a MobileNet V2 model pre-loaded with weights trained on ImageNet. By specifying the include_top=False argument,
