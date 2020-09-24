@@ -5,7 +5,7 @@ import numpy as np
 import scipy
 
 
-class My_Custom_Generator(keras.utils.Sequence):
+class ImageBatchGenerator(keras.utils.Sequence):
 
     def __init__(self, file_trial_list, file_Y_list, num_in_each, batch_size, to_fit):
         cnt = 0
@@ -44,8 +44,6 @@ class My_Custom_Generator(keras.utils.Sequence):
         return len(self.extract_inds)
 
     def __getitem__(self, num_2_extract):
-        # raw_X, raw_Y = self._build_data(self.file_list_chunks[num_2_extract],
-        #                       self.file_Y_list_chunks[num_2_extract])
 
         raw_X = self._generate_X(self.file_list_chunks[num_2_extract])
 
@@ -71,11 +69,7 @@ class My_Custom_Generator(keras.utils.Sequence):
         else:
             return rgb_tensor_aug
 
-    # def _getitem__tmp(self, touch_aug_num, no_touch_aug_num)
-
     def get_single_trials(self, num_2_extract):
-        # raw_X, raw_Y = self._build_data([self.file_trial_list[num_2_extract]],
-        #                       [self.file_Y_list[num_2_extract]])
 
         raw_X = self._generate_X(self.file_list_chunks[num_2_extract])
         raw_Y = self._generate_Y(self.file_Y_list_chunks[num_2_extract])
