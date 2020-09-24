@@ -11,7 +11,7 @@ setuptools.setup(
     description="A pre-trained CNN for touch classification of whisker to objects",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/jacheung/auto-curator",
+    url="https://github.com/jacheung/autocurator",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
