@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a96d15a-7ce4-446f-b20f-a1a6adfc144d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/autocurator/data_prepare/load_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/autocurator/data_prepare/load_images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autocurator/dump.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autocurator/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/autocurator/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autocurator/data_prepare/load_images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autocurator/models/build_model.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +18,23 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autocurator/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/autocurator/dump.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -22,18 +42,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/autocurator/data_prepare/load_images.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-817">
-              <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -53,12 +61,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/autocurator/__init__.py" />
         <option value="$PROJECT_DIR$/autocurator/loadimages.py" />
         <option value="$PROJECT_DIR$/autocurator/model.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/autocurator/models/build_model.py" />
         <option value="$PROJECT_DIR$/autocurator/data_prepare/load_images.py" />
+        <option value="$PROJECT_DIR$/autocurator/__init__.py" />
+        <option value="$PROJECT_DIR$/autocurator/dump.py" />
       </list>
     </option>
   </component>
@@ -72,7 +81,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,10 +93,22 @@
               <item name="auto-curator" type="462c0819:PsiDirectoryNode" />
               <item name="autocurator" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="auto-curator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-curator" type="462c0819:PsiDirectoryNode" />
+              <item name="autocurator" type="462c0819:PsiDirectoryNode" />
+              <item name="model_checkpoints" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto-curator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-curator" type="462c0819:PsiDirectoryNode" />
+              <item name="pictures" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -122,18 +142,19 @@
       <option name="presentableId" value="Default" />
       <updated>1600883135044</updated>
       <workItem from="1600883136463" duration="3033000" />
-      <workItem from="1600903337499" duration="1289000" />
+      <workItem from="1600903337499" duration="2971000" />
+      <workItem from="1600973979921" duration="557000" />
+      <workItem from="1600974739673" duration="359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4322000" />
+    <option name="totallyTimeSpent" value="6920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="31" width="1415" height="846" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22505462" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23088129" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -148,7 +169,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.28116712" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.28116712" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -162,19 +183,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/autocurator/model.py" />
     <entry file="file://$PROJECT_DIR$/autocurator/loadimages.py" />
-    <entry file="file://$PROJECT_DIR$/autocurator/models/build_model.py">
+    <entry file="file://$PROJECT_DIR$/../coding-challenges/arrays_and_strings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1560" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autocurator/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/autocurator/data_prepare/load_images.py" />
+    <entry file="file://$PROJECT_DIR$/autocurator/models/build_model.py" />
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -182,13 +197,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autocurator/data_prepare/load_images.py">
+    <entry file="file://$PROJECT_DIR$/autocurator/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-817">
-          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autocurator/dump.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

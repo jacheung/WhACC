@@ -95,29 +95,6 @@ class ImageBatchGenerator(keras.utils.Sequence):
 
         # return rgb_tensor, raw_Y, frame_index#, trial_file_num
 
-    # Function to generate an image tensor and corresponding label array
-
-    def _build_data(self, x_files, y_files):
-        """Phils original build data structure used to generate X and Y together. It has been broken down into _generate_X and _generate_Y. Delete ASAP"""
-        cnt1 = -1;
-
-        for k in range(len(y_files)):
-            cnt1 = cnt1 + 1
-            tmp1 = scipy.io.loadmat(x_files[cnt1])
-            tmp2 = scipy.io.loadmat(y_files[cnt1])
-
-            Xtmp = tmp1['finalMat']
-            Ytmp = tmp2['touchClass']
-            if cnt1 == 0:
-                raw_X = Xtmp
-                raw_Y = Ytmp
-            else:
-
-                raw_X = np.concatenate((raw_X, Xtmp), axis=0)
-                raw_Y = np.concatenate((raw_Y, Ytmp), axis=0)
-
-        return raw_X, raw_Y
-
     def _generate_X(self, x_files):
         cnt1 = -1;
 
