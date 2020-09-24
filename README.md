@@ -10,3 +10,6 @@ Many labs (e.g. [Hires Lab](https://www.hireslab.org/)) use tasks that involve w
 ## Data: 
 Current dataset involves 400,000 semi-automated curated images. The distribution with sample images are listed below. 
 ![](./pictures/frame_distribution.png)
+
+## Code contributors:
+WhACC code and software was originally developed by Jonathan Cheung and Phillip Maire in the laboratory of Samuel Andrew Hires. 
