@@ -6,10 +6,18 @@ Many labs (e.g. [Hires Lab](https://www.hireslab.org/)) use tasks that involve w
 ![](./pictures/trial_animation.gif) <br />
 *Single example trial lasting 4 seconds. Example video (left) along with whisker traces, decomposed components, and spikes recorded from L5 (right). How do we identify the precise millisecond frame when touch occurs?*
 
-
 ## Data: 
-Current dataset involves 400,000 semi-automated curated images. The distribution with sample images are listed below. 
+Current dataset involves 400,000 semi-automated curated images. The distribution with sample images are listed below.  
 ![](./pictures/frame_distribution.png)
 
+## Walk through: 
+A tutorial walk-through using Google CoLab can be viewed here at ......
+
+load_model() : This function builds TensorFlow's MobileNetV2 ands adds a classification head. Trained model parameters, via TensorFlow checkpoints, are automatically loaded into the model so classification can be performed on a new dataset. 
+
+ImageBatchGenerator() : This is a class for creating an image generator. An image generator's purpose is to batch images. Inputs will be directories for image datasets. 
+
+model.predict(ImageBatchGenerator) : simply put, this will output prediction probabilities of touch (1) or non-touch (0). 
+
 ## Code contributors:
-WhACC code and software was originally developed by Jonathan Cheung and Phillip Maire in the laboratory of Samuel Andrew Hires. 
+WhACC code and software was originally developed by Jonathan Cheung and Phillip Maire in the laboratory of [Samuel Andrew Hires](https://www.hireslab.org/). 
