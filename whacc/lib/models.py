@@ -56,7 +56,7 @@ def load_model():
                   loss=tf.keras.losses.BinaryCrossentropy(),
                   metrics=METRICS)
 
-    model_checkpoints = os.getcwd() + '/autocurator/model_checkpoints/'
+    model_checkpoints = os.getcwd() + '/whacc/model_checkpoints/'
     latest = tf.train.latest_checkpoint(model_checkpoints)
     model.load_weights(latest)
 
