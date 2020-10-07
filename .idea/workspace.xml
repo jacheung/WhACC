@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a96d15a-7ce4-446f-b20f-a1a6adfc144d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/whacc/demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whacc/model_checkpoints/test_session.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocurator/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocurator/autocurator_CNN_v1_5.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocurator/lib/build_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocurator/lib/load_images.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocurator/model_checkpoints/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocurator/model_checkpoints/cp-final-20200923.ckpt.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocurator/model_checkpoints/cp-final-20200923.ckpt.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whacc/lib/image_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/whacc/lib/image_tools.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,17 +23,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="af117e39-80fb-4bba-b9b3-a276749d3a52" />
-  <component name="ProjectFrameBounds">
-    <option name="y" value="31" />
-    <option name="width" value="1415" />
-    <option name="height" value="846" />
-  </component>
   <component name="ProjectId" id="1iHuFzWWPEdsjLkvdrvw0D6o3yI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -63,11 +58,14 @@
       <workItem from="1600975513226" duration="2659000" />
       <workItem from="1601575036686" duration="577000" />
       <workItem from="1601576750349" duration="598000" />
-      <workItem from="1602024438277" duration="277000" />
+      <workItem from="1602024438277" duration="4975000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

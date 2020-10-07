@@ -3,8 +3,19 @@ from tensorflow import keras
 import matplotlib.pyplot as plt
 import numpy as np
 import h5py
-import scipy
+import glob
 
+
+def get_h5_info(h5_file_directory):
+    H5_file_list = glob.glob(h5_file_directory + "*.h5")
+
+    total_frame_count = []
+    for H5_file in H5_file_list:
+        H5 = h5py.File(H5_file, 'r')
+        images = H5['images']
+        total_frame_count.append(images.shape[0])
+
+    return H5_file_list, total_frame_count
 
 def batch_size_file_ind_selector(num_in_each, batch_size):
     """batch_size_file_ind_selector - needed for ImageBatchGenerator to know which H5 file index
@@ -40,14 +51,14 @@ def reset_to_first_frame_for_each_file_ind(file_inds_for_H5_extraction):
 
 class ImageBatchGenerator(keras.utils.Sequence):
 
-    def __init__(self, batch_size, H5_file_list,num_frames_in_all_H5_files):
+    def __init__(self, batch_size, h5_file_list,num_frames_in_all_H5_files):
         file_inds_for_H5_extraction = batch_size_file_ind_selector(
             num_frames_in_all_H5_files, batch_size)
         subtract_for_index = reset_to_first_frame_for_each_file_ind(
             file_inds_for_H5_extraction)
         # self.to_fit = to_fit #set to True to return XY and False to return X
         self.batch_size = batch_size
-        self.H5_file_list = H5_file_list
+        self.H5_file_list = h5_file_list
         self.num_frames_in_all_H5_files = num_frames_in_all_H5_files
         self.file_inds_for_H5_extraction = file_inds_for_H5_extraction
         self.subtract_for_index = subtract_for_index
