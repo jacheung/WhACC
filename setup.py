@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="whacc",  # name of package
-    version="0.0.1",
+    version="0.0.2",
     author="Jon C",
     author_email="jacheung@usc.edu",
     description="A pre-trained CNN for touch classification of whisker to objects",

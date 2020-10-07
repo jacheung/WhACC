@@ -7,3 +7,6 @@ whacc.egg-info/PKG-INFO
 whacc.egg-info/SOURCES.txt
 whacc.egg-info/dependency_links.txt
 whacc.egg-info/top_level.txt
+whacc/lib/__init__.py
+whacc/lib/image_tools.py
+whacc/lib/models.py
