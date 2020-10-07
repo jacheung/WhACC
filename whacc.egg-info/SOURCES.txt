@@ -1,0 +1,9 @@
+README.md
+setup.py
+whacc/__init__.py
+whacc/demo.py
+whacc/evaluation.py
+whacc.egg-info/PKG-INFO
+whacc.egg-info/SOURCES.txt
+whacc.egg-info/dependency_links.txt
+whacc.egg-info/top_level.txt
