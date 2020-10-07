@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a96d15a-7ce4-446f-b20f-a1a6adfc144d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/whacc/demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/whacc/model_checkpoints/test_session.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/whacc/lib/image_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/whacc/lib/image_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whacc/lib/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/whacc/lib/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,7 @@
       <workItem from="1600975513226" duration="2659000" />
       <workItem from="1601575036686" duration="577000" />
       <workItem from="1601576750349" duration="598000" />
-      <workItem from="1602024438277" duration="4975000" />
+      <workItem from="1602024438277" duration="5825000" />
     </task>
     <servers />
   </component>

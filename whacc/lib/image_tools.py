@@ -7,15 +7,14 @@ import glob
 
 
 def get_h5_info(h5_file_directory):
-    H5_file_list = glob.glob(h5_file_directory + "*.h5")
-
+    h5_file_list = glob.glob(h5_file_directory + "*.h5")
     total_frame_count = []
-    for H5_file in H5_file_list:
+    for H5_file in h5_file_list:
         H5 = h5py.File(H5_file, 'r')
         images = H5['images']
         total_frame_count.append(images.shape[0])
 
-    return H5_file_list, total_frame_count
+    return h5_file_list, total_frame_count
 
 def batch_size_file_ind_selector(num_in_each, batch_size):
     """batch_size_file_ind_selector - needed for ImageBatchGenerator to know which H5 file index

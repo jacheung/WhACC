@@ -2,6 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 import os
 
+
 def load_model():
     # Create base model
 
