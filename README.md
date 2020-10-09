@@ -8,7 +8,7 @@ Many labs (e.g. [Hires Lab](https://www.hireslab.org/)) use tasks that involve w
 
 ## Data: 
 Current dataset involves 400,000 semi-automated curated images. The distribution with sample images are listed below.  
-![](./pictures/frame_distribution.png)
+<div align=”center”> ![](./pictures/frame_distribution.png)</div>
 
 ## Walk through: 
 A tutorial walk-through using Google CoLab can be viewed here on [Google CoLab](https://colab.research.google.com/drive/1pgdpc0IWkce07Sto6AolQTGoXKCW_mes?authuser=2#scrollTo=6NkUgDlChm79)  
