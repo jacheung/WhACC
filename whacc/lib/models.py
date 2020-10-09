@@ -1,15 +1,24 @@
 import tensorflow as tf
 from tensorflow import keras
-import os
+from whacc.config import config
 
 
 def load_model():
-    # Create base model
+    file_folder = 'model_201008/'
+    model = tf.keras.models.load_model(config.TRAINED_MODEL_DIR / file_folder)
+    return model
 
-    # First, instantiate a MobileNet V2 model pre-loaded with weights trained on ImageNet. By specifying the include_top=False argument,
-    # you load a network that doesn't include the classification layers at the top, which is ideal for feature extraction
 
-    # Create the base model from the pre-trained model MobileNet V2
+def scratch_model():
+    """
+    Create base model
+
+    First, instantiate a MobileNet V2 model pre-loaded with weights trained on ImageNet. By specifying the include_top=False argument,
+    you load a network that doesn't include the classification layers at the top, which is ideal for feature extraction
+
+    Create the base model from the pre-trained model MobileNet V2
+    """
+
     IMG_SIZE = 96  # All images will be resized to 96x96. This is the size of MobileNetV2 input sizes
     IMG_SHAPE = (IMG_SIZE, IMG_SIZE, 3)
 
@@ -57,8 +66,15 @@ def load_model():
                   loss=tf.keras.losses.BinaryCrossentropy(),
                   metrics=METRICS)
 
-    model_checkpoints = os.getcwd() + '/whacc/model_checkpoints/'
+    return model
+
+
+def load_model_checkpoint():
+    model = scratch_model()
+
+    model_checkpoints = config.TRAINED_MODEL_DIR
     latest = tf.train.latest_checkpoint(model_checkpoints)
+    print(latest)
     model.load_weights(latest)
 
     return model

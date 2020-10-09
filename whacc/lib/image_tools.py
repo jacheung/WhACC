@@ -7,7 +7,7 @@ import glob
 
 
 def get_h5_info(h5_file_directory):
-    h5_file_list = glob.glob(h5_file_directory + "*.h5")
+    h5_file_list = glob.glob(str(h5_file_directory) + '/' + "*.h5")
     total_frame_count = []
     for H5_file in h5_file_list:
         H5 = h5py.File(H5_file, 'r')
@@ -17,14 +17,16 @@ def get_h5_info(h5_file_directory):
     return h5_file_list, total_frame_count
 
 def batch_size_file_ind_selector(num_in_each, batch_size):
-    """batch_size_file_ind_selector - needed for ImageBatchGenerator to know which H5 file index
+    """
+    batch_size_file_ind_selector - needed for ImageBatchGenerator to know which H5 file index
     to use depending on the iteration number used in __getitem__ in the generator.
     this all depends on the variable batch size.
 
     Example: the output of the following...
     batch_size_file_ind_selector([4000, 4001, 3999], [2000])
     would be [0, 0, 1, 1, 1, 2, 2] which means that there are 2 chunks in the first
-    H5 file, 3 in the second and 2 in the third based on chunk size of 2000 """
+    H5 file, 3 in the second and 2 in the third based on chunk size of 2000
+    """
     break_into = np.ceil(np.array(num_in_each)/batch_size)
     extract_inds = np.array([])
     for k, elem in enumerate(break_into):
@@ -35,10 +37,12 @@ def batch_size_file_ind_selector(num_in_each, batch_size):
 
 # file_inds_for_H5_extraction is the same as extract_inds output from the above function
 def reset_to_first_frame_for_each_file_ind(file_inds_for_H5_extraction):
-    """reset_to_first_frame_for_each_file_ind - uses the output of batch_size_file_ind_selector
+    """
+    reset_to_first_frame_for_each_file_ind - uses the output of batch_size_file_ind_selector
     to determine when to reset the index for each individual H5 file. using the above example
     the out put would be [0, 0, 2, 2, 2, 5, 5], each would be subtracted from the indexing to
-    set the position of the index to 0 for each new H5 file."""
+    set the position of the index to 0 for each new H5 file.
+    """
     subtract_for_index = []
     for k, elem in enumerate(file_inds_for_H5_extraction):
         tmp1 = np.diff(file_inds_for_H5_extraction)

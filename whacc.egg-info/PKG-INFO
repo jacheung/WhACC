@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
 Name: whacc
-Version: 0.0.2
+Version: 0.0.10
 Summary: A pre-trained CNN for touch classification of whisker to objects
-Home-page: https://github.com/jacheung/autocurator
-Author: Jon C
+Home-page: https://github.com/jacheung/whacc
+Author: Jonathan Cheung
 Author-email: jacheung@usc.edu
-License: UNKNOWN
+License: MIT
 Description: # Whisker Automated Contact Classifier 
         
         ## Premise: 
