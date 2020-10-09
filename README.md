@@ -11,13 +11,10 @@ Current dataset involves 400,000 semi-automated curated images. The distribution
 ![](./pictures/frame_distribution.png)
 
 ## Walk through: 
-A tutorial walk-through using Google CoLab can be viewed here at ......
-
-load_model() : This function builds TensorFlow's MobileNetV2 ands adds a classification head. Trained model parameters, via TensorFlow checkpoints, are automatically loaded into the model so classification can be performed on a new dataset. 
-
-ImageBatchGenerator() : This is a class for creating an image generator. An image generator's purpose is to batch images. Inputs will be directories for image datasets. 
-
-model.predict(ImageBatchGenerator) : simply put, this will output prediction probabilities of touch (1) or non-touch (0). 
+A tutorial walk-through using Google CoLab can be viewed here on [Google CoLab](https://colab.research.google.com/drive/1pgdpc0IWkce07Sto6AolQTGoXKCW_mes?authuser=2#scrollTo=6NkUgDlChm79)  
+- load_model() : This function builds TensorFlow's MobileNetV2 ands adds a classification head. Trained model parameters, via TensorFlow checkpoints, are automatically loaded into the model so classification can be performed on a new dataset. 
+- ImageBatchGenerator() : This is a class for creating an image generator. An image generator's purpose is to batch images. Inputs will be directories for image datasets. 
+- model.predict(ImageBatchGenerator) : simply put, this will output prediction probabilities of touch (1) or non-touch (0). 
 
 ## Code contributors:
 WhACC code and software was originally developed by Jonathan Cheung and Phillip Maire in the laboratory of [Samuel Andrew Hires](https://www.hireslab.org/). 
