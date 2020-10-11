@@ -6,6 +6,14 @@ import h5py
 import glob
 
 
+def original_image(x):
+    """
+    This is used to transform batch generated images [-1 1] to the original image [0,255] for plotting
+    """
+    image = tf.cast((x + 1) * 127.5, tf.uint8)
+    return image
+
+
 def get_h5_info(h5_file_directory):
     h5_file_list = glob.glob(str(h5_file_directory) + '/' + "*.h5")
     total_frame_count = []
