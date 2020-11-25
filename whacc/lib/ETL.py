@@ -80,7 +80,7 @@ class PoleTracking():
           fno += 1
           success, frame = video.read()
 
-        img_stack = np.array(img_list)
+        img_stack = np.array(img_list, dtype=np.uint8)
         loc_stack = np.array(loc_list)
         return img_stack, loc_stack
 
@@ -99,12 +99,25 @@ class PoleTracking():
         print(str(np.round(exceed_threshold,2)) + '% of the pole locations are within ' + str(threshold) + ' pixels from the mean pole location.')
 
     def track_random(self):
-        video_file = np.random.choice(self.video_files,1)[0]
+        """
+        This function will randomly grab a video file within the directory and
+        track all frames within there and plot tracked locations over the original image
+        """
+        video_file = np.random.choice(self.video_files, 1)[0]
         print('Testing tracking on ' + video_file)
         img_stack, loc_stack = self.track(video_file = video_file)
         self.plot_pole_center(video_file = video_file, location_stack = loc_stack)
 
     def track_all_and_save(self):
+        """
+        This is the major output function of the PoleTracking class. This functions will
+        track all video files within the directory and save an H5 file with the meta information:
+        - file_name_nums : this is the trial number extracted from the video file name
+        - image: the tracked image stack
+        - labels : this is pre-allocation for the CNN to label the images
+        - trial_nums_and_frame_nums: 2 dimensional vector. Row 1 = trial number and Row 2 = frame number in that trial
+        - in_range: this is pre-allocation for the pole in range tracker
+        """
         # create image stack
         final_stack = []
         start = time.time()
@@ -127,8 +140,6 @@ class PoleTracking():
         for a,b in zip(list(trial_nums),list(frame_nums)):
           fnn = np.concatenate([fnn,np.repeat(int(a),b)])
 
-        assert(len(fnn) == len(final_stack))
-
         # populating "labels" with -1
         labels = np.ones(img_stack.shape[0]) * -1
 
@@ -136,6 +147,7 @@ class PoleTracking():
         in_range = np.empty(labels.shape)
         in_range[:] = np.nan
 
+        # check to make sure sizes across file names and images are equal
         assert(len(fnn) == len(final_stack))
 
         # save data in H5 with name similar to video
@@ -146,10 +158,12 @@ class PoleTracking():
         hf = h5py.File(self.video_directory + file_name + '.h5', 'w')
 
         hf.create_dataset('file_name_nums', data=fnn)
-        hf.create_dataset('images', data=img_stack)
+        hf.create_dataset('images', data=final_stack)
         hf.create_dataset('labels', data=labels)
         hf.create_dataset('trial_nums_and_frame_nums', data = tnf)
         hf.create_dataset('in_range', data = in_range)
 
         hf.close()
+        return h5py.File(self.video_directory + file_name + '.h5','r')
+
 

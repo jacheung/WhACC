@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a96d15a-7ce4-446f-b20f-a1a6adfc144d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/auto-curator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/auto-curator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whacc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/whacc/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/whacc/lib/ETL.py" beforeDir="false" afterPath="$PROJECT_DIR$/whacc/lib/ETL.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +65,7 @@
       <workItem from="1602024438277" duration="5825000" />
       <workItem from="1602101101696" duration="18295000" />
       <workItem from="1604078999723" duration="1610000" />
-      <workItem from="1605910392372" duration="1831000" />
+      <workItem from="1605910392372" duration="2503000" />
     </task>
     <servers />
   </component>
