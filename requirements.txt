@@ -38,3 +38,6 @@ urllib3==1.25.10
 Werkzeug==1.0.1
 wrapt==1.12.1
 zipp==3.3.0
+
+opencv-python~=4.4.0.44
+setuptools~=50.3.0
